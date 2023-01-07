@@ -1,0 +1,225 @@
+.intro {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+}
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(-90deg, rgb(187, 223, 241), rgb(64, 170, 220));
+  }
+}
+.intro .left {
+  flex: 0.5;
+  overflow: hidden;
+  background-image: linear-gradient(-90deg, rgb(187, 223, 241), rgb(64, 170, 220));
+}
+@media (max-width: 768px) {
+  .intro .left {
+    background-image: none;
+  }
+}
+.intro .left .imagecontainer {
+  width: 90%;
+  height: 100%;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .intro .left .imagecontainer {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    align-items: center;
+    background-image: none;
+  }
+}
+.intro .left .imagecontainer img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+@media (max-width: 768px) {
+  .intro .left .imagecontainer img {
+    height: 80%;
+  }
+}
+.intro .right {
+  flex: 0.5;
+  background-image: linear-gradient(90deg, rgb(187, 223, 241), rgb(64, 170, 220));
+  overflow-y: hidden;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .intro .right {
+    background-image: none;
+  }
+}
+.intro .right .wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .intro .right .wrapper {
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: none;
+  }
+}
+.intro .right .wrapper h1 {
+  font-size: 60px;
+  margin: 10px 0;
+}
+@media (max-width: 768px) {
+  .intro .right .wrapper h1 {
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10vw;
+  }
+}
+.intro .right .wrapper h2 {
+  font-size: 35px;
+}
+@media (max-width: 768px) {
+  .intro .right .wrapper h2 {
+    font-size: 22px;
+    align-items: center;
+  }
+}
+.intro .right .wrapper h3 {
+  font-size: 30px;
+}
+@media (max-width: 768px) {
+  .intro .right .wrapper h3 {
+    font-size: 20px;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+.intro .right .wrapper h3 span {
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  transition: all ease;
+  -webkit-animation: colorChange 5s infinite;
+          animation: colorChange 5s infinite;
+}
+@media (max-width: 768px) {
+  .intro .right .wrapper h3 span {
+    font-size: 20px;
+  }
+}
+@-webkit-keyframes colorChange {
+  0% {
+    color: aliceblue;
+  }
+  33% {
+    color: rgb(159, 44, 94);
+  }
+  66% {
+    color: rgb(24, 17, 54);
+  }
+  100% {
+    color: rgb(216, 13, 13);
+  }
+}
+@keyframes colorChange {
+  0% {
+    color: aliceblue;
+  }
+  33% {
+    color: rgb(159, 44, 94);
+  }
+  66% {
+    color: rgb(24, 17, 54);
+  }
+  100% {
+    color: rgb(216, 13, 13);
+  }
+}
+.intro .right .wrapper h3 .ityped-cursor {
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+  color: black;
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.intro a {
+  position: absolute;
+  bottom: 10px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .intro a {
+    margin-left: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.intro a img {
+  width: 100px;
+  height: 100px;
+  -webkit-animation: arrowBlink 5s infinite;
+          animation: arrowBlink 5s infinite;
+}
+@media (max-width: 768px) {
+  .intro a img {
+    margin-left: 15vw;
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@-webkit-keyframes arrowBlink {
+  50% {
+    opacity: 0.5;
+    transition: all ease;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(190deg);
+    width: 10 px;
+    height: 10 px;
+    transition: all ease;
+  }
+}
+@keyframes arrowBlink {
+  50% {
+    opacity: 0.5;
+    transition: all ease;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(190deg);
+    width: 10 px;
+    height: 10 px;
+    transition: all ease;
+  }
+}/*# sourceMappingURL=intro.css.map */

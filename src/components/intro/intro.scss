@@ -1,0 +1,196 @@
+@import "../../global.scss";
+
+.intro{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+        background-image: linear-gradient(-90deg,  rgb(187, 223, 241),rgb(64, 170, 220));
+    }
+
+    .left{
+        flex: 0.5;
+        // background-color: rgb(255, 255, 255);
+        overflow: hidden;
+        background-image: linear-gradient(-90deg,  rgb(187, 223, 241),rgb(64, 170, 220));
+        // background-image: radial-gradient(rgb(2, 8, 33), rgb(64, 170, 220), rgb(187, 223, 241));
+
+        @include mobile{
+            background-image: none;
+        }
+        .imagecontainer{
+            width: 90%;
+            height: 100%;
+            overflow-y: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            @include mobile{
+                display: flex;
+                justify-content: center;
+                margin-left: 10px;
+                align-items: center;
+                background-image: none;
+            }
+
+            img{
+                @include mobile{
+                    height: 80%;
+                    // align-items: center;
+                    // justify-content: center;
+                }
+
+                width: 100%;
+                border-radius: 50%;
+                box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            }
+        }
+    }
+
+    .right{
+        flex: 0.5;
+        // background-color: rgb(160, 212, 238);
+        background-image: linear-gradient(90deg,  rgb(187, 223, 241),rgb(64, 170, 220));
+        overflow-y: hidden;
+        position: relative;
+
+        @include mobile{
+            background-image: none;
+        }
+
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include mobile{
+                // padding-left: 0;
+                margin-top: -50px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                background-image: none;
+            }
+
+            h1{
+                font-size: 60px;
+                margin: 10px 0;
+               
+                @include mobile{
+                        font-size: 30px;
+                        align-items: center;
+                        justify-content: center;
+                        margin-left: 10vw;
+                }
+            }
+            h2{
+                @include mobile{
+                    font-size: 22px;
+                    align-items: center;
+                }
+                font-size: 35px;
+            }
+            h3{
+                @include mobile{
+                    font-size: 20px;
+                    align-items: center;
+                    margin-top: 10px;
+                }
+                font-size: 30px;
+
+                span{
+                    font-size: 35px;
+                    color: rgb(255, 255, 255);
+                    transition: all ease;
+                    animation: colorChange 5s infinite;
+
+                    @include mobile{
+                        font-size: 20px;
+                    }
+                }
+
+                @keyframes colorChange {
+                    0%{
+                        color: aliceblue;
+                    }
+                    33%{
+                        color: rgb(159, 44, 94);
+                    }
+                    66%{
+                        color: rgb(24, 17, 54);
+                    }
+                    100%{
+                        color: rgb(216, 13, 13);
+                    }
+                }
+                .ityped-cursor{
+                    animation: blink 1s infinite;
+                    color: black;
+                }
+                @keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                    
+                }
+            }
+            }
+        }
+
+        a{
+            position: absolute;
+            // z-index: 4; 
+            bottom: 10px;
+            overflow: hidden;
+            
+            @include mobile{
+                margin-left: 25vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            
+            img{
+                width: 100px;
+                height: 100px;
+                animation: arrowBlink 5s infinite ;
+
+                @include mobile{
+                    margin-left: 15vw;
+                    margin-bottom: 20px;
+                    width: 80px;
+                    height: 80px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            @keyframes arrowBlink {
+                50%{
+                    opacity: .5;
+                    transition: all ease;
+                }
+                100%{
+                    opacity: 0;
+                    transform: rotate(190deg);
+                    width: 10 px;
+                    height: 10 px;
+                    transition: all ease;
+                }
+                
+            }
+
+    }
+}

@@ -1,0 +1,123 @@
+@import "../../global.scss";
+
+.portfolio{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    h1{
+        // font-size: 5vw;  //50
+
+        font-size: 56px;
+        display: flex;
+        padding: 1vh 0vw;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        @include mobile{
+            font-size: 30px;
+            padding: 5px 10px;
+            overflow: hidden;
+        }
+    }
+    ul{
+        margin: 1vw 1vh;
+        padding: 1vh 1vw;
+        list-style: none;
+        display: flex;
+        overflow: hidden;
+
+        @include mobile{
+            font-size: 2vh;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1vh 1vw;
+            padding: 2vw 2vh;
+        }
+
+        li{
+            margin: 1vh 1vw;
+            font-size: 25px;
+            padding: 2vh 1vw;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            overflow: hidden;
+
+            @include mobile{
+                margin-top: -1vw;
+                font-size: 2vh;
+                padding: 1vh 2vw;
+            }
+
+            &.active{
+                background-image: linear-gradient(to right, rgb(0, 0, 2), rgb(27, 0, 137));
+                color: aliceblue;
+                border-radius: 30px;
+                cursor: pointer;
+
+            }
+        }
+    }
+    .container{
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        cursor: pointer;
+        overflow: hidden;
+
+        @include mobile{
+            width: 100%;
+        }
+
+        .item{
+            width: 20vw;
+            height: 20vh;
+            border-radius: 20px;
+            border: 2px solid gray;
+            margin: 1vh 1vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all .5s ease-in-out;
+
+            @include mobile{
+                width: 43vw;
+                height: 21vh;
+            }
+
+            h3{
+                position: absolute;
+                font-size: 20px;
+                color: beige;
+
+            }
+
+            img{  //ther was some space inside the container 
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+            }
+
+            &:hover{
+                background-image: linear-gradient(to right, rgb(0, 0, 2), rgb(27, 0, 137));
+
+                img{
+                    z-index: 2;
+                    opacity: 0.2;
+
+                }
+            }
+        
+        }
+
+    }
+}

@@ -1,0 +1,82 @@
+.contact {
+  background-color: lightblue;
+  display: flex;
+}
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact .left {
+  flex: 1;
+  overflow: hidden;
+}
+.contact .left img {
+  height: 100%;
+}
+.contact .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.contact .right h2 {
+  font-size: 50px;
+}
+.contact .right form {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.contact .right form input {
+  width: 300px;
+  height: 30px;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .contact .right form input {
+    width: 150px;
+    height: 20px;
+  }
+}
+.contact .right form textarea {
+  width: 300px;
+  height: 200px;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .contact .right form textarea {
+    width: 150px;
+    height: 70px;
+    margin-top: -10px;
+  }
+}
+.contact .right form button {
+  width: 150px;
+  height: 30px;
+  color: white;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .contact .right form button {
+    width: 80px;
+  }
+}
+.contact .right form span {
+  color: blue;
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .contact .right form span {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=contact.css.map */

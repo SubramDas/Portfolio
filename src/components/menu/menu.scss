@@ -1,0 +1,44 @@
+.menu{
+    width: 300px;
+    height: 100vh;
+    // background-color: aqua;
+    background-image: linear-gradient(to right, rgb(0, 0, 2), rgb(27, 0, 137));
+    // background-color: aqua;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease-in-out;
+
+    &.active{
+        right: 0;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 30px;
+        color: aliceblue;
+        width: 80%;
+        
+        li{
+            margin-bottom: 30px;
+            a{
+                font-size: inherit;
+                color: inherit;
+                text-decoration: none;
+                font-weight: 400;
+            
+                &:hover{
+                    font-weight: 700;
+                }
+            }
+
+        }
+    }
+
+}

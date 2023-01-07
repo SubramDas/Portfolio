@@ -1,0 +1,125 @@
+.testimonials {
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .testimonials {
+    justify-content: space-around;
+  }
+}
+.testimonials h1 {
+  font-size: 5vw;
+}
+.testimonials .container {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .testimonials .container {
+    flex-direction: column;
+  }
+}
+.testimonials .container .card {
+  width: 25vw;
+  height: 70%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -2px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background-color: aliceblue;
+  margin: 0px 0px;
+  transition: all 1s ease;
+}
+@media (max-width: 768px) {
+  .testimonials .container .card {
+    height: 50%;
+    width: 45vw;
+    margin-top: 20px;
+    justify-content: space-evenly;
+  }
+}
+.testimonials .container .card.featured {
+  width: 30vw;
+  height: 80%;
+  margin: 0px 15px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .testimonials .container .card.featured {
+    justify-content: space-evenly;
+    height: 50%;
+    width: 45vw;
+    margin-top: 20px;
+  }
+}
+.testimonials .container .card:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.testimonials .container .card .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.testimonials .container .card .top img.left, .testimonials .container .card .top img.right {
+  height: 2vh;
+}
+.testimonials .container .card .top img.user {
+  height: 6vh;
+  width: 4vw;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 1vh 1vw;
+}
+@media (max-width: 768px) {
+  .testimonials .container .card .top img.user {
+    height: 3vh;
+    width: 4vw;
+  }
+}
+.testimonials .container .card .center {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: aqua;
+}
+@media (max-width: 768px) {
+  .testimonials .container .card .center {
+    font-size: 5px;
+    padding: 10px 7px;
+    overflow: hidden;
+  }
+}
+.testimonials .container .card .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1vh 1vw;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .testimonials .container .card .bottom {
+    font-size: 4px;
+    margin-top: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.testimonials .container .card .bottom h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3px;
+}/*# sourceMappingURL=testimonials.css.map */

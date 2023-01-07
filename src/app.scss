@@ -1,0 +1,26 @@
+.app{
+    height: 100vh;
+
+    .sections{
+        scroll-behavior: smooth;
+        width: 100%;
+        // height: calc(100vh - 100px);
+        height: 85vh;
+        background-color: aqua;
+        position: relative;
+        // top: 100px;
+        top:15vh;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none; //for firefox
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    
+        > *{  //=> every component insid the section class
+            width: 100%;
+            // height: calc(100vh - 100px);
+            height: 85vh;
+            scroll-snap-align: start;
+        }
+    }
+}

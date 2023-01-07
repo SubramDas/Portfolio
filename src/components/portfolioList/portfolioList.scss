@@ -1,0 +1,23 @@
+@import "../../global.scss";
+
+.portfolioList{
+    margin: 10px 2px;
+    font-size: 20px;
+    padding: 10px 10px;
+    cursor: pointer;
+
+    // @include mobile{
+    //     font-size: 20px;
+    //     margin-top: 20px;
+    //     padding-top: 10px;
+        
+    // }
+
+    &.active{
+        background-image: linear-gradient(to right, rgb(0, 0, 2), rgb(27, 0, 137));
+        color: aliceblue;
+        border-radius: 30px;
+        cursor: pointer;
+
+    }
+}

@@ -1,0 +1,193 @@
+@import "../../global.scss";
+.works{
+    background-color: rgb(95, 239, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    // @include mobile{
+    //     overflow: hidden;
+    // }
+    
+
+    .arrow{
+        height: 14vh;  //100px
+        width: 10vw;
+        position: absolute;
+
+        @include mobile{
+            display: none;
+        }
+        
+
+        &.left{
+            left: 10vw; //150px
+            transform: rotateY(180deg);
+            cursor: pointer;
+        }
+
+        &.right{
+            right: 10vw;  //150px
+            cursor: pointer;
+
+        }
+    }
+
+    .slider{
+        height: 52vh; //350px
+        width: 300vw;
+       
+        display: flex;
+        position: absolute;
+        left: 0vw;
+        transition: all 1s ease-out; 
+
+        // @include mobile{
+        //     height: 20vh;
+        //     // flex-direction: column;
+        //     justify-content: center;
+        //     overflow: hidden;
+        // }
+
+        @include mobile{
+            height: 80vh;
+            width: 100vw;
+            left: 0vw;
+            justify-content: center;
+            // margin-bottom: 10vh;
+            flex-direction: column;
+
+        }
+        
+        
+        .container{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            margin-right: 23vw;
+            margin-left: 23vw;
+            // margin-left: -30vw;
+
+
+            @include mobile{
+                overflow: hidden;
+                width: 50vw;
+                height: 50vh;
+                left: 0vw;
+                margin-bottom: 1.5vh;
+
+            
+            }
+
+
+
+
+            .item{
+                display: flex;
+                width: 92vw;  //700px
+                height: 100%;
+                background-color: aliceblue;
+                border-radius: 8%;  //20px
+                overflow: hidden;
+
+                // @include mobile{
+                //     width: 90%;
+                //     height: 25.4 vh; //180px
+                //     margin-top: 2.1 vh;
+                //     overflow-y: hidden;
+                // }
+                
+
+
+                .left{
+                    flex: 4;
+                    height: 100%;
+                    // background-color: aqua;
+                    display: flex;
+                    align-items:center;
+                    justify-content: center;
+
+                    .leftContainer{
+                        width: 90%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .imgContainer{
+                            width: 2.2vw; //40px
+                            height: 9.64vh; //40px
+                            border-radius: 50%;
+                            // background-color: rgb(238, 92, 92);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            @include mobile{
+                                height: 2.84vh; //20
+                                width: 2.6vw; //20
+                            }
+                            
+
+                            .img{
+                                width: 3.91 vw; //30
+                            }
+                        
+                        }
+                        h2{
+                            font-size: 20px; //20
+                            // @include mobile{
+                            //     font-size: .625rem; //10
+                            //  }
+
+                            @include mobile{
+                                font-size: 10px;
+                            }
+
+                        }
+                        p{
+                            font-size: 1.5vw;  //13
+
+                            @include mobile{ 
+                               font-size: .563;  //9
+                            }
+                            
+
+                        }
+                        span{
+                            font-size: 1.2vw;  //12 
+                            font-weight: bold;
+                            text-decoration: underline;
+                            cursor: pointer;
+
+                            // @include mobile{
+                            //    text-decoration: none;
+                            //    font-size: .625; //10
+                            //  }
+                        }
+                    }
+
+                }
+                .right{
+                    flex: 8;
+                    // background-color: brown;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transform: rotate(-10deg);
+                    overflow: hidden;
+    
+                    
+
+                    
+
+                }
+            }
+        }
+    }
+
+
+}
